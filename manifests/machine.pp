@@ -73,7 +73,7 @@ class docker::machine (
       }
     } else {
       if $curl_ensure {
-        stdlib::ensure_packages(['curl'])
+        ensure_packages(['curl'])
       }
 
       exec { "Install Docker Machine ${version}":

@@ -8,9 +8,9 @@ module Puppet::Parser::Functions
     subject = args[0]
 
     escape_function = if self['facts'] && self['facts']['os']['family'] == 'windows'
-                        'stdlib::powershell_escape'
+                        'powershell_escape'
                       else
-                        'stdlib::shell_escape'
+                        'shell_escape'
                       end
 
     call_function(escape_function, subject)

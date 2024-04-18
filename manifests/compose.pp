@@ -88,7 +88,7 @@ class docker::compose (
       }
     } else {
       if $curl_ensure {
-        stdlib::ensure_packages(['curl'])
+        ensure_packages(['curl'])
       }
 
       exec { "Install Docker Compose ${version}":
